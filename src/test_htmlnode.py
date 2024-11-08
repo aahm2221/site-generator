@@ -14,7 +14,6 @@ class TestHtmlNode(unittest.TestCase):
         props_html = node.props_to_html()
         self.assertEqual(props_html, ' href="aurl" prop2="value"')
 
-
     def test_empty_props(self):
         node = HtmlNode(props={})
         props_html = node.props_to_html()
