@@ -1,8 +1,9 @@
 import unittest
-
-from leafnode import LeafNode
-from textnode import TextNode, TextType
-from text_to_html import text_node_to_html_node
+import sys
+sys.path.append("..")
+from src.leafnode import LeafNode
+from src.textnode import TextNode, TextType
+from src.text_to_html import text_node_to_html_node
 
 
 class TestTextToHtml(unittest.TestCase):

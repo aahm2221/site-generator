@@ -1,6 +1,7 @@
 import unittest
-
-from leafnode import LeafNode
+import sys
+sys.path.append("..")
+from src.leafnode import LeafNode
 
 
 class TestLeafNode(unittest.TestCase):

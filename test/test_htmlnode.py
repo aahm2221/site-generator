@@ -1,6 +1,7 @@
 import unittest
-
-from htmlnode import HtmlNode
+import sys
+sys.path.append("..")
+from src.htmlnode import HtmlNode
 
 
 class TestHtmlNode(unittest.TestCase):

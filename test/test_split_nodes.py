@@ -1,7 +1,8 @@
 import unittest
-
-from textnode import TextNode, TextType
-from split_nodes_delimiter import split_nodes_delimiter
+import sys
+sys.path.append("..")
+from src.textnode import TextNode, TextType
+from src.split_nodes import split_nodes_delimiter
 
 
 class TestSplitNodesDelimiter(unittest.TestCase):

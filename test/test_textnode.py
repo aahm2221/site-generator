@@ -1,6 +1,7 @@
 import unittest
-
-from textnode import TextNode, TextType
+import sys
+sys.path.append("..")
+from src.textnode import TextNode, TextType
 
 
 class TestTextNode(unittest.TestCase):
