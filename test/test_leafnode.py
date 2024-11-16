@@ -1,6 +1,5 @@
 import unittest
-import sys
-sys.path.append("..")
+
 from src.leafnode import LeafNode
 
 

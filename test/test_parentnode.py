@@ -1,6 +1,5 @@
 import unittest
-import sys
-sys.path.append("..")
+
 from src.parentnode import ParentNode
 from src.leafnode import LeafNode
 

@@ -1,6 +1,5 @@
 import unittest
-import sys
-sys.path.append("..")
+
 from src.leafnode import LeafNode
 from src.textnode import TextNode, TextType
 from src.text_to_html import text_node_to_html_node

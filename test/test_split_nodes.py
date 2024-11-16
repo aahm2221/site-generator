@@ -1,6 +1,5 @@
 import unittest
-import sys
-sys.path.append("..")
+
 from src.textnode import TextNode, TextType
 from src.split_nodes import split_nodes_delimiter, split_nodes_image, split_nodes_link
 
