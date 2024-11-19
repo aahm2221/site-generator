@@ -1,6 +1,7 @@
-from .textnode import TextNode, TextType
+from copy_file import copy_file
+
 def main():
-    print(TextNode("This is node", TextType.BOLD,"https://www.boot.dev"))
+    copy_file("static", "public")
 
 if __name__ == "__main__":
     main()
