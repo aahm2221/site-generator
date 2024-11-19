@@ -1,6 +1,6 @@
 import unittest
 
-from src.extract_markdown import extract_markdown_images, extract_markdown_links
+from src.extract_markdown import extract_markdown_images, extract_markdown_links, extract_title
 
 
 class TestExtractMarkdown(unittest.TestCase):
@@ -33,6 +33,16 @@ class TestExtractMarkdown(unittest.TestCase):
         text = "This is text with a [to boot dev](https://www.boot.dev) and ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg)"
         extracted_links = extract_markdown_links(text)
         self.assertEqual(extracted_links, [("to boot dev", "https://www.boot.dev")])
+
+    def test_extract_title(self):
+        markdown = "#    title   \n\n>quote#\n\n*something else\n\ntext here"
+        title = extract_title(markdown)
+        self.assertEqual(title, "title")
+
+    def test_extract_title_error(self):
+        markdown = ">quote#\n\n*something else\n\ntext here"
+        with self.assertRaises(Exception, msg="Error: No Title Found"):
+            extract_title(markdown)
 
 
 if __name__ == "__main__":

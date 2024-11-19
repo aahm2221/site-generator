@@ -1,9 +1,9 @@
-from .blocks import markdown_to_blocks, block_to_block_type
-from .parentnode import ParentNode
-from .leafnode import LeafNode
-from .textnode import TextNode, TextType
-from .text_to_textnodes import text_to_textnodes
-from .text_to_html import text_node_to_html_node
+from blocks import markdown_to_blocks, block_to_block_type
+from parentnode import ParentNode
+from leafnode import LeafNode
+from textnode import TextNode, TextType
+from text_to_textnodes import text_to_textnodes
+from text_to_html import text_node_to_html_node
 
 def markdown_to_html_node(markdown):
     children = []
@@ -45,8 +45,8 @@ def quote_to_node(block):
     children = []
     split_block = block.split("\n")
     for quote in split_block:
-        children.extend(text_to_children(quote.lstrip(">")))
-    return ParentNode("blockquote", [ParentNode("p", children)])
+        children.extend(text_to_children(quote.lstrip("> ")))
+    return ParentNode("blockquote", children)
 
 
 def unordered_list_to_node(block):
